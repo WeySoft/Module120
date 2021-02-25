@@ -13,8 +13,8 @@ namespace M120Projekt.Data
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Properties<DateTime>().Configure(c => c.HasColumnType("datetime2"));
-            modelBuilder.Entity<KlasseA>().ToTable("KlasseA"); // Damit kein "s" angehängt wird an Tabelle
+            modelBuilder.Entity<ToDo>().ToTable("ToDo"); // Damit kein "s" angehängt wird an Tabelle
         }
-        public DbSet<KlasseA> KlasseA { get; set; }
+        public DbSet<ToDo> ToDo { get; set; }
     }
 }

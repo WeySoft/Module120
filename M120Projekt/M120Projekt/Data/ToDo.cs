@@ -1,25 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace M120Projekt.Data
 {
-    public class KlasseA
+    public class ToDo
     {
         #region Datenbankschicht
         [Key]
-        public Int64 KlasseAId { get; set; }
+        public Int64 ToDoId { get; set; }
         [Required]
-        public String TextAttribut { get; set; }
+        public String Titel { get; set; }
         [Required]
-        public DateTime DatumAttribut { get; set; }
+        public DateTime MachenBis { get; set; }
         [Required]
-        public Boolean BooleanAttribut { get; set; }
+        public Boolean Abgeschlossen { get; set; }
+        [Required]
+        public Int64 Widerholungen { get; set; }
+        [Required]
+        public String Beschreibung { get; set; }
+        [Required]
+        public String Teamfarbe { get; set; }
+
         #endregion
         #region Applikationsschicht
-        public KlasseA() { }
+        public ToDo() { }
         [NotMapped]
         public String BerechnetesAttribut
         {
@@ -28,43 +35,43 @@ namespace M120Projekt.Data
                 return "Im Getter kann Code eingefügt werden für berechnete Attribute";
             }
         }
-        public static List<KlasseA> LesenAlle()
+        public static List<ToDo> LesenAlle()
         {
             using (var db = new Context())
             {
-                return (from record in db.KlasseA select record).ToList();
+                return (from record in db.ToDo select record).ToList();
             }
         }
-        public static KlasseA LesenID(Int64 klasseAId)
+        public static ToDo LesenID(Int64 klasseAId)
         {
             using (var db = new Context())
             {
-                return (from record in db.KlasseA where record.KlasseAId == klasseAId select record).FirstOrDefault();
+                return (from record in db.ToDo where record.ToDoId == klasseAId select record).FirstOrDefault();
             }
         }
-        public static List<KlasseA> LesenAttributGleich(String suchbegriff)
+        public static List<ToDo> LesenAttributGleich(String suchbegriff)
         {
             using (var db = new Context())
             {
-                return (from record in db.KlasseA where record.TextAttribut == suchbegriff select record).ToList();
+                return (from record in db.ToDo where record.Titel == suchbegriff select record).ToList();
             }
         }
-        public static List<KlasseA> LesenAttributWie(String suchbegriff)
+        public static List<ToDo> LesenAttributWie(String suchbegriff)
         {
             using (var db = new Context())
             {
-                return (from record in db.KlasseA where record.TextAttribut.Contains(suchbegriff) select record).ToList();
+                return (from record in db.ToDo where record.Titel.Contains(suchbegriff) select record).ToList();
             }
         }
         public Int64 Erstellen()
         {
-            if (this.TextAttribut == null || this.TextAttribut == "") this.TextAttribut = "leer";
-            if (this.DatumAttribut == null) this.DatumAttribut = DateTime.MinValue;
+            if (this.Titel == null || this.Titel == "") this.Titel = "leer";
+            if (this.MachenBis == null) this.MachenBis = DateTime.MinValue;
             using (var db = new Context())
             {
-                db.KlasseA.Add(this);
+                db.ToDo.Add(this);
                 db.SaveChanges();
-                return this.KlasseAId;
+                return this.ToDoId;
             }
         }
         public Int64 Aktualisieren()
@@ -73,7 +80,7 @@ namespace M120Projekt.Data
             {
                 db.Entry(this).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
-                return this.KlasseAId;
+                return this.ToDoId;
             }
         }
         public void Loeschen()
@@ -86,7 +93,7 @@ namespace M120Projekt.Data
         }
         public override string ToString()
         {
-            return KlasseAId.ToString(); // Für bessere Coded UI Test Erkennung
+            return ToDoId.ToString(); // Für bessere Coded UI Test Erkennung
         }
         #endregion
     }
