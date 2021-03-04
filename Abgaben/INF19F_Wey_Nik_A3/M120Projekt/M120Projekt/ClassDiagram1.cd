@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="M120Projekt.Data.ToDo">
+    <Position X="1.25" Y="0.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQIAAAAAAAEAAhAgIAAAAAABEQAAAgAAACwAMA=</HashCode>
+      <FileName>Data\ToDo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

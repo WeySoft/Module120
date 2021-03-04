@@ -1,0 +1,19 @@
+Bedienschritte mehrstufiger Eingabeprozesse lassen sich rückgängig machen („Undo-Funktion“) und ohne wieder ganz von vorn starten zu müssen,
+Der User vieleicht etwas löscht obwohl er das gar nicht wollte, um jetzt den Zeitaufwand und die Frustration des Users zu sparen nutzt man eine Undo-Funktion die das letzte gelöschte Element zurück bringt.
+
+Ergebnisse von Abfragen lassen sich sortieren und filtern.
+Der User hat vieleicht 100 Elemente in seiner Datenbank jetzt will er wissen was er bis am nächsten gemacht haben muss. Um soetwas heraus zu finden sortiert er die Tabelle um zu sehen was als nächstes abläuft. Somit muss er nicht auf jedes einzelne klicken. 
+
+Bedien- und Steuerfunktionen entsprechen den zu erwartenden Vorerfahrungen der User.
+Der User ist sich schon an gewisse Standarts gewöhnt, wenn er jetzt alles neu lehrenen muss kann es sein das der User aufhört die ToDo-App zu benutzer was natürlich schlecht ist.
+
+Sicherheitsabfragen schützen vor folgenschweren Fehlbedienungen, z. B. vor Löschvorgängen.
+Der User will natürlich nicht seine wichtigen Datenverlieren und deswegen sollte noch gefragt werden ob er das wirklich will nicht das er seine Daten löscht und wieder von vorne starten muss.
+
+Der User kann Anzeigeformate (z. B. Fenstergrößen) und Ausgabeformate (z. B. von Grafiken oder Downloads) den eigenen Bedürfnissen und Vorlieben anpassen.
+Falls der User ein 4k Monitor hat sollte er nicht auf einem 2 Centimeter grossem Fester arbeiten müssen. 
+
+Eingabefehler des Users führen nicht zu Programmabstürzen
+Das Programm sollte nicht abstürzen wenn der User einen nicht gültigen wert eingibt, weil der User die gültigen werte verileren möchte und es den User nervt wenn er das Programm neustarten muss.
+
+  
