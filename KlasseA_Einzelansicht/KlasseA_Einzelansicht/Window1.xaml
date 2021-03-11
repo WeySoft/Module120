@@ -1,0 +1,35 @@
+﻿<Window x:Class="KlasseA_Einzelansicht.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KlasseA_Einzelansicht"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <WrapPanel Orientation="Vertical" HorizontalAlignment="Center" Width="400px" Grid.Row="0">
+            <Label Content="Title" Height="30px"></Label>
+            <TextBox x:Name="textBoxTitle" Height="30px" TextWrapping="Wrap" Text="TextBoxTitle" MinWidth="400px"  MaxWidth="800px" MaxLength="50" MaxLines="1"></TextBox>
+            <Label Content="Beschreibung" Height="30px"></Label>
+            <TextBox x:Name="textBoxBeschreibung" Height="60px" TextWrapping="Wrap" Text="TextBoxBeschreibung" MinWidth="400px" MaxWidth="800px" MaxLength="500"></TextBox>
+            <Label Content="Teamfarbe" Height="30px"></Label>
+            <ComboBox x:Name="ComboBoxTeamfarbe" MinWidth="400px" MaxWidth="800px" MaxDropDownHeight="150px">
+                <ComboBoxItem Content="Rot"></ComboBoxItem>
+                <ComboBoxItem Content="Gruen"></ComboBoxItem>
+                <ComboBoxItem Content="Gelb"></ComboBoxItem>
+                <ComboBoxItem Content="Blau"></ComboBoxItem>
+            </ComboBox>
+            <Label Content="Schon gemacht:"></Label>
+            <RadioButton x:Name="radionTrue" Content="Ja"></RadioButton>
+            <RadioButton x:Name="radioFalse" Content="Nein" IsChecked="True"></RadioButton>
+            <Label Content="Machen bis:" Height="30px"></Label>
+            <DatePicker x:Name="datePickerMachenBis" MinWidth="400px" MaxHeight="800px"></DatePicker>
+        </WrapPanel>
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Margin="5px">
+            <Button x:Name="buttonSpeichern" Content="Speichern" Margin="5px" Width="90px" Height="30px"/>
+            <Button x:Name="buttonNeu" Content="Neu" Margin="5px" Width="90px" Height="30px"/>
+            <Button x:Name="buttonBearbeiten" Content="Bearbeiten" Margin="5px" Width="90px" Height="30px"/>
+            <Button x:Name="buttonLöschen" Content="Löschen" Margin="5px" Width="90px" Height="30px"/>
+        </WrapPanel>
+    </Grid>
+</Window>
